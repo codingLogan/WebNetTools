@@ -7,8 +7,8 @@ $output = shell_exec("ls -al");
 echo $output;
 
 echo "<hr>";
-$output = shell_exec("sudo /usr/bin/arp-scan --localnet > localnet.txt");
-echo $output;
+exec("sudo /usr/bin/arp-scan --localnet > localnet.txt", $output);
+var_dump($output);
 
 echo "</pre>";
 
