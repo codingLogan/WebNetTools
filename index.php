@@ -1,4 +1,6 @@
 <?php
+require_once "functions/output_helpers.php";
+
 echo date('Y-m-d H:i:s');
 
 echo "<hr>";
@@ -11,11 +13,8 @@ exec("sudo /usr/bin/arp-scan --localnet | tee localnet.txt", $output);
 
 // Print output from arp-scan command
 echo "<hr>";
-foreach($output as $line){
-	echo "$line<br>";
-}
+outputArray($output);
 
 
 echo "<hr>";
-phpinfo();
 ?>
