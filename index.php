@@ -1,17 +1,20 @@
 <?php
 echo date('Y-m-d H:i:s');
-echo "<hr>";
-echo "<pre>";
 
+echo "<hr>";
 $output = shell_exec("ls -al");
 echo $output;
 
-echo "<hr>";
+
 $output = array();
 exec("sudo /usr/bin/arp-scan --localnet | tee localnet.txt", $output);
-var_dump($output);
 
-echo "</pre>";
+// Print output from arp-scan command
+echo "<hr>";
+foreach($output as $line){
+	echo "$line<br>";
+}
+
 
 echo "<hr>";
 phpinfo();
