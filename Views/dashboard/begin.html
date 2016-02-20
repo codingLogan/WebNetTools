@@ -38,7 +38,9 @@
           <ul class="nav navbar-nav navbar-right">
             <?php
               foreach($dashboard->site_nav as $link){
-                echo '<li><a href="'.$link->url.'">'.$link->text.'</a></li>';
+                echo '<li>';
+                $link->html();
+                echo '</li>';
               }
             ?>
           </ul>

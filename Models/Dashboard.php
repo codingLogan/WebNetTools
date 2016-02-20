@@ -33,5 +33,9 @@ class NavLink {
 		$this->text = $text;
 		$this->url = $url;
 	}
+
+	public function html(){
+		echo '<a href="'.$this->url.'">'.htmlentities($this->text).'</a>';
+	}
 }
 ?>
