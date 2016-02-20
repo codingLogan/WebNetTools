@@ -10,7 +10,7 @@ require_once "../Models/Dashboard.php";
 class DashboardController {
 	private $dashboard;
 
-	public function __construct{
+	public function __construct(){
 		$this->dashboard = new Dashboard();
 	}
 
