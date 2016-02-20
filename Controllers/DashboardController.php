@@ -5,7 +5,7 @@ Author: Logan Rasmussen
 Date: 2/20/2016
 */
 
-require_once "../Models/Dashboard.php";
+require_once "Models/Dashboard.php";
 
 class DashboardController {
 	private $dashboard;
