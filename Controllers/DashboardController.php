@@ -5,7 +5,7 @@ Author: Logan Rasmussen
 Date: 2/20/2016
 */
 
-require_once "Models/Dashboard.php";
+require_once "../Models/Dashboard.php";
 
 class DashboardController {
 	private $dashboard;
@@ -15,6 +15,7 @@ class DashboardController {
 	}
 
 	public function start(){
+		echo "starting dashboard";
 		include "Views/dashboard/begin.html";
 		include "Views/dashboard/end.html";
 	}
