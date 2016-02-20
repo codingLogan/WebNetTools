@@ -11,7 +11,7 @@ class DashboardController {
 	private $dashboard;
 
 	public function __construct{
-		$dashboard = new Dashboard();
+		$this->dashboard = new Dashboard();
 	}
 
 	public function start(){
