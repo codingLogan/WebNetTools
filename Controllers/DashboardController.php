@@ -15,6 +15,7 @@ class DashboardController {
 	}
 
 	public function start(){
+		$dashboard = $this->dashboard;
 		include "Views/dashboard/begin.html";
 		include "Views/dashboard/end.html";
 	}
