@@ -16,6 +16,7 @@ class ArpScan {
 	public function __construct(){
 		exec("sudo /usr/bin/arp-scan --localnet | tee localnet.txt", $this->results);
 		$this->machines = array();
+		$this->parse_results();
 	}
 
 	public function parse_results(){
