@@ -22,7 +22,7 @@ class ArpScan {
 	public function parse_results(){
 		if(is_array($this->results)){
 			foreach($this->results as $line){
-				$strings = explode(' ',$line);
+				$strings = preg_split('/\s+/',$line);
 				if(array_key_exists(0,$strings)){
 					echo "strings 0 index exists: ".$strings[0]."<br>";
 
