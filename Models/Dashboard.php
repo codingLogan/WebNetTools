@@ -20,7 +20,7 @@ class Dashboard {
 			new NavLink("Home", "index.php")
 		);
 		$this->tools_nav = array(
-			new NavLink("Scan Local IPs", "localnetwork.php")
+			new NavLink("Scan Local IPs", "arpscan.php")
 		);
 	}
 }
