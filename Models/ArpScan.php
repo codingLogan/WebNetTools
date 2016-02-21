@@ -12,10 +12,12 @@ class ArpScan {
 	// array of output
 	public $results;
 	public $machines;
+	public $info;
 
 	public function __construct(){
 		exec("sudo /usr/bin/arp-scan --localnet | tee localnet.txt", $this->results);
 		$this->machines = array();
+		$this->info = array();
 		$this->parse_results();
 	}
 
@@ -24,9 +26,11 @@ class ArpScan {
 			foreach($this->results as $line){
 				$strings = preg_split('/\s+/',$line);
 				if(array_key_exists(0,$strings)){
-					$filter = filter_var($strings[0], FILTER_VALIDATE_IP);
 					if(filter_var($strings[0], FILTER_VALIDATE_IP) !== false){
 						$this->machines[] = new Machine($strings[0], $strings[1]);
+					}
+					else{
+						$this->info[] = $line;
 					}
 				}
 			}
