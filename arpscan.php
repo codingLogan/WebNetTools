@@ -5,7 +5,7 @@ Logan Rasmussen
 2/20/2016
 */
 
-require_once "Controllers/ArpScan.php";
+require_once "Controllers/ArpScanController.php";
 
 $controller = new ArpScanController();
 $controller->start();
