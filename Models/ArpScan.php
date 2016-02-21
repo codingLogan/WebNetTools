@@ -24,7 +24,8 @@ class ArpScan {
 			foreach($this->results as $line){
 				$strings = explode(' ',$line);
 				if(array_key_exists(0,$strings)){
-					echo "strings 0 index exists<br>";
+					echo "strings 0 index exists: ".$strings[0]."<br>";
+
 					$filter = filter_var($strings[0], FILTER_VALIDATE_IP);
 					echo "filter: ".$filter."<br>";
 					if(filter_var($strings[0], FILTER_VALIDATE_IP) !== false){
