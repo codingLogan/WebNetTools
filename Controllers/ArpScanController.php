@@ -21,8 +21,6 @@ class ArpScanController {
 		$dashboard = $this->dashboard;
 		$arpscan_data = $this->arpscan_data;
 		include "Views/dashboard/begin.html";
-		echo "arpscan_data<br>";
-		var_dump($arpscan_data);
 		include "Views/arpscan.html";
 		include "Views/dashboard/end.html";
 	}
