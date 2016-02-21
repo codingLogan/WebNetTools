@@ -6,6 +6,7 @@ Date: 2/20/2016
 */
 
 require_once "Models/ArpScan.php";
+require_once "Models/Dashboard.php";
 
 class ArpScanController {
 	public $dashboard;
