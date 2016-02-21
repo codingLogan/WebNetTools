@@ -20,8 +20,11 @@ class ArpScan {
 	}
 
 	public function parse_results(){
+		echo "parsing<br>";
 		if(is_array($this->results)){
+			echo "results is an array<br>";
 			foreach($this->results as $line){
+				echo $line."<br>";
 				$strings = explode(' ',$line);
 				if(array_key_exists(0,$strings)){
 					if(filter_var($strings[0], FILTER_VALIDATE_IP) !== false){
