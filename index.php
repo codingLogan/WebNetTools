@@ -1,9 +1,11 @@
 <?php
 require_once "functions/output_helpers.php";
+require_once "Controllers/IndexController.php";
 
-echo date('Y-m-d H:i:s');
+$controller = new IndexController();
+$controller->start();
 
-echo "<hr>";
+/*echo "<hr>";
 $output = array();
 exec("ls -al", $output);
 outputArray($output);
@@ -16,5 +18,5 @@ echo "<hr>";
 outputArray($output);
 
 
-echo "<hr>";
+echo "<hr>";*/
 ?>

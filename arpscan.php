@@ -1,6 +1,6 @@
 <?php
 /*
-localnetwork.php
+arpscan.php
 Logan Rasmussen
 2/20/2016
 */
