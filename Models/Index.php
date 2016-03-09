@@ -17,3 +17,4 @@ class Index {
 		$this->footer_text = "-Created by Logan Rasmussen-";
 	}
 }
+?>

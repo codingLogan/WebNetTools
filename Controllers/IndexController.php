@@ -10,7 +10,7 @@ class IndexController {
 	public $index;
 
 	public function __construct(){
-		$this->$index = new Index();
+		$this->index = new Index();
 	}
 
 	public function start(){
@@ -18,3 +18,4 @@ class IndexController {
 		include "Views/index.html";
 	}
 }
+?>
