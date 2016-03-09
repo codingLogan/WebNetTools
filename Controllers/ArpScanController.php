@@ -20,9 +20,9 @@ class ArpScanController {
 	public function start(){
 		$dashboard = $this->dashboard;
 		$arpscan_data = $this->arpscan_data;
-		include "Views/dashboard/begin2.html";
+		include "Views/dashboard/begin.html";
 		include "Views/arpscan.html";
-		include "Views/dashboard/end2.html";
+		include "Views/dashboard/end.html";
 	}
 }
 ?>
