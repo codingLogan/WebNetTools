@@ -18,10 +18,10 @@ class Dashboard {
 		// Create data for common dashboard pages
 		$this->title = "WebNet Tools";
 		$this->site_nav = array(
-			new NavLink("Home", "index.php")
+			new NavLink("Dashboard", "dashboard.php"),
+			new NavLink("Scan Local IPs", "arpscan.php")
 		);
 		$this->tools_nav = array(
-			new NavLink("Scan Local IPs", "arpscan.php")
 		);
 	}
 }
