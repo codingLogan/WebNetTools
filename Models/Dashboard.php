@@ -7,6 +7,7 @@ Date: 2/20/2016
 Contains all the data for building the Dashboard's pages
 Should be included in any page that needs a dashboard view
 */
+require_once "Models/NavLink.php";
 
 class Dashboard {
 	public $title;
@@ -25,17 +26,4 @@ class Dashboard {
 	}
 }
 
-class NavLink {
-	public $text;
-	public $url;
-
-	public function __construct($text, $url = "#"){
-		$this->text = $text;
-		$this->url = $url;
-	}
-
-	public function html(){
-		echo '<a href="'.$this->url.'">'.htmlentities($this->text).'</a>';
-	}
-}
 ?>
