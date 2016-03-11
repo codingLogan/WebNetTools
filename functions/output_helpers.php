@@ -18,7 +18,7 @@ function outputTable($data, $column_headings_array=null, $print_keys=false){
 	$table_string = '<table class="table table-striped">';
 	if(is_array($column_headings_array)){
 		// Output headings for table
-		$table_string .= outputRow($column_headings_array, true, $print_keys);
+		$table_string .= outputRow($column_headings_array, true, false);
 	}
 
 	if(is_array($data) || is_object($data)){
@@ -27,6 +27,7 @@ function outputTable($data, $column_headings_array=null, $print_keys=false){
 			$table_string .= outputRow($row);
 		}
 	}
+	$table_string .= "</table>";
 
 	return $table_string;
 }
