@@ -52,15 +52,16 @@ function outputCells($row_data, $header, $print_keys, $row_key){
 	var_dump($row_key);
 	$cell_data_string = "";
 	if(is_array($row_data) || is_object($row_data)){
-		foreach($row_data as $key => $cell_data){
-			if($print_keys && $row_key !== null){
-				echo $row_key;
-				$cell_data_string .= $td.$row_key.$td;
-			}
+		foreach($row_data as $cell_data){
 			$cell_data_string .= $td.$cell_data.$td;
 		}
 	}
-	else return $td.$row_data.$td;
+	else {
+		if($print_keys && $row_key !== null){
+			$cell_data_string .= $td.$row_key.$td;
+		}
+		$cell_data_string .= $td.$cell_data.$td;
+	}
 
 	return $cell_data_string;
 }
