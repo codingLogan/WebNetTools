@@ -10,16 +10,14 @@ class Geo{
 	public $json;
 
 	public function __construct(){
-		echo "before exec";
 		exec("curl ipinfo.io", $this->results);
-		echo "after exec var_dump(this->results): ";
-		var_dump($this->results);
 		implode('', $this->results);
+		echo $this->results;
 		$this->json = json_decode($this->results);
 
 		// Make sure JSON was decoded sucessfully
 		if($this->json !== null){
-
+			echo " -success- ";
 		}
 	}
 }

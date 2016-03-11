@@ -20,6 +20,7 @@ class GeoController {
 		$geo = $this->geo;
 		$dashboard = $this->dashboard;
 		include "Views/dashboard/begin.html";
+		include "Views/geo.html";
 		include "Views/dashboard/end.html";
 	}
 }
