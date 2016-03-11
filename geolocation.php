@@ -6,7 +6,12 @@ Date: 3/8/2016
 */
 require_once "Controllers/GeoController.php";
 
-$controller = new GeoController();
+$ip = null;
+if(isset($_REQUEST['ip'])){
+	$ip = $_REQUEST['ip'];
+}
+
+$controller = new GeoController($ip);
 $controller->start();
 
 ?>

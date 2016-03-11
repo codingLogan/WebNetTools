@@ -11,8 +11,8 @@ class GeoController {
 	public $geo;
 	public $dashboard;
 
-	public function __construct(){
-		$this->geo = new Geo();
+	public function __construct($ip){
+		$this->geo = new Geo($ip);
 		$this->dashboard = new Dashboard();
 	}
 
