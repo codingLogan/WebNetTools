@@ -52,6 +52,7 @@ function outputCells($row_data, $header, $print_keys, $row_key){
 	if(is_array($row_data) || is_object($row_data)){
 		foreach($row_data as $key => $cell_data){
 			if($print_keys){
+				echo $row_key;
 				$cell_data_string .= $td.$row_key.$td;
 			}
 			$cell_data_string .= $td.$cell_data.$td;
