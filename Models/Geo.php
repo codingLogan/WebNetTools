@@ -22,7 +22,7 @@ class Geo{
 		
 		$this->results = implode('', $this->results);
 		$this->json = json_decode($this->results);
-		$this->footer_text = "Service supplied using an API by ipinfo.io";
+		$this->footer_text = "-Information provided by ipinfo.io-";
 	}
 }
 
