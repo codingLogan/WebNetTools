@@ -9,7 +9,8 @@
 	<div class="col-xs-6">
 		<?php 
 		var_dump($geo->json); 
-		var_dump($geo->results); 
+		var_dump($geo->results);
+		echo outputTable($geo->json);
 		?>
 		<!-- <table class="table table-striped">
 			<tr><th>IP Address</th><th>Mac Address</th></tr>
