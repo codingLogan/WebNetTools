@@ -6,8 +6,9 @@
 	</div>
 
 	<div class="col-xs-6">
-
-		<table class="table table-striped">
+		<?php
+		echo outputTable($arpscan_data->machines, array("IP Address", "MAC Address"));
+		<!-- <table class="table table-striped">
 			<tr><th>IP Address</th><th>Mac Address</th></tr>
 			<?php
 			foreach($arpscan_data->machines as $machine){
@@ -19,7 +20,7 @@
 				<?php
 			}
 			?>
-		</table>
+		</table> -->
 	</div>
 	<div class="col-xs-6"></div>
 

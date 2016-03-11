@@ -13,11 +13,6 @@ class Geo{
 		exec("curl ipinfo.io", $this->results);
 		$this->results = implode('', $this->results);
 		$this->json = json_decode($this->results);
-
-		// Make sure JSON was decoded sucessfully
-		if($this->json !== null){
-			echo " -success- ";
-		}
 	}
 }
 

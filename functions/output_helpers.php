@@ -14,7 +14,7 @@ function outputTable($data, $column_headings_array=null, $print_keys=false){
 	if(empty($data)){
 		return "No Data Found...";
 	}
-	
+
 	if($print_keys !== true){
 		$print_keys = false;
 	}
@@ -54,14 +54,14 @@ function outputCells($row_data, $header, $print_keys, $row_key){
 	$cell_data_string = "";
 	if(is_array($row_data) || is_object($row_data)){
 		foreach($row_data as $cell_data){
-			$cell_data_string .= $td.$cell_data.$td;
+			$cell_data_string .= $td.htmlentities($cell_data).$td;
 		}
 	}
 	else {
 		if($print_keys && $row_key !== null){
-			$cell_data_string .= $td.$row_key.$td;
+			$cell_data_string .= $td.htmlentities($row_key).$td;
 		}
-		$cell_data_string .= $td.$row_data.$td;
+		$cell_data_string .= $td.htmlentities($row_data).$td;
 	}
 
 	return $cell_data_string;
