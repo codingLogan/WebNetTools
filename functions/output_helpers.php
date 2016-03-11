@@ -26,6 +26,7 @@ function outputTable($data, $column_headings_array=null, $print_keys=false){
 		// Output rows in $data
 		var_dump($data);
 		foreach($data as $key => $row){
+			var_dump($key);
 			$table_string .= outputRow($row, false, $print_keys, $key);
 		}
 	}
