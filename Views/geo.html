@@ -10,7 +10,7 @@
 		<?php 
 		var_dump($geo->json); 
 		var_dump($geo->results);
-		echo outputTable($geo->json);
+		echo outputTable($geo->json, array("Data Point", "Value"), true);
 		?>
 		<!-- <table class="table table-striped">
 			<tr><th>IP Address</th><th>Mac Address</th></tr>
