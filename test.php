@@ -6,6 +6,13 @@ used for debugging and testing functions
 
 require_once "functions/output_helpers.php";
 
+$object = new stdClass();
+$object->prop1 = "value";
+$object->prop2 = "value";
+$object->prop3 = "value";
+
+echo outputTable($object, array("keys","values"),true);
+
 $array = array(
 	 "key" => "value"
 	,"key1" => "value"
