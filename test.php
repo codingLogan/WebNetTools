@@ -10,7 +10,6 @@ $object = new stdClass();
 $object->prop1 = "value";
 $object->prop2 = "value";
 $object->prop3 = "value";
-
 echo outputTable($object, array("keys","values"),true);
 
 $array = array(
@@ -23,6 +22,15 @@ $array = array(
 	,"key6" => "value"
 	,"key7" => "value"
 );
-
 echo outputTable($array, array("keys","values"), true);
+
+$object_array = array(
+	$object
+	,$object
+	,$object
+	,$object
+	,$object
+	,$object
+);
+echo outputTable($object_array, array("prop1", "prop2", "prop3"));
 ?>
