@@ -8,23 +8,8 @@
 
 	<div class="col-xs-6">
 		<?php 
-		var_dump($geo->json); 
-		var_dump($geo->results);
 		echo outputTable($geo->json, array("Data Point", "Value"), true);
 		?>
-		<!-- <table class="table table-striped">
-			<tr><th>IP Address</th><th>Mac Address</th></tr>
-			<?php
-			foreach($arpscan_data->machines as $machine){
-				?>
-				<tr>
-					<td><?php echo htmlentities($machine->ip); ?></td>
-					<td><?php echo htmlentities($machine->mac); ?></td>
-				</tr>
-				<?php
-			}
-			?>
-		</table> -->
 	</div>
 	<div class="col-xs-6"></div>
 
