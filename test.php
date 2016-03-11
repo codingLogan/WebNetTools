@@ -17,5 +17,5 @@ $array = array(
 	,"key" => "value"
 );
 
-outputTable($array, array("keys","values"), true);
+echo outputTable($array, array("keys","values"), true);
 ?>
