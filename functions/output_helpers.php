@@ -14,11 +14,12 @@ function outputTable($data, $column_headings_array=null, $print_keys=false){
 	if($print_keys !== true){
 		$print_keys = false;
 	}
+	var_dump($print_keys);
 
 	$table_string = '<table class="table table-striped">';
 	if(is_array($column_headings_array)){
 		// Output headings for table
-		$table_string .= outputRow($column_headings_array, true, false);
+		$table_string .= outputRow($column_headings_array, true, false, null);
 	}
 
 	if(is_array($data) || is_object($data)){
@@ -51,7 +52,7 @@ function outputCells($row_data, $header, $print_keys, $row_key){
 	$cell_data_string = "";
 	if(is_array($row_data) || is_object($row_data)){
 		foreach($row_data as $key => $cell_data){
-			if($print_keys){
+			if($print_keys && $row_key !== null){
 				echo $row_key;
 				$cell_data_string .= $td.$row_key.$td;
 			}
