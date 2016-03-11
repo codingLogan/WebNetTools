@@ -11,6 +11,10 @@ function outputArray($array){
 // function to be used for creating HTML tables
 // accepts object, array, or array of objects/arrays
 function outputTable($data, $column_headings_array=null, $print_keys=false){
+	if(empty($data)){
+		return "No Data Found...";
+	}
+	
 	if($print_keys !== true){
 		$print_keys = false;
 	}
