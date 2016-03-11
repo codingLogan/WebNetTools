@@ -8,6 +8,7 @@ Date: 3/8/2016
 class Geo{
 	public $results;
 	public $json;
+	public $footer_text;
 
 	public function __construct($ip){
 		$valid = filter_var($ip, FILTER_VALIDATE_IP);
@@ -21,6 +22,7 @@ class Geo{
 		
 		$this->results = implode('', $this->results);
 		$this->json = json_decode($this->results);
+		$this->footer_text = "Service supplied using an API by ipinfo.io";
 	}
 }
 
