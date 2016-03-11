@@ -49,7 +49,7 @@ function outputCells($row_data, $header, $print_keys, $row_key){
 	if($header==true){
 		$td = "<th>";
 	}
-
+	var_dump($row_key);
 	$cell_data_string = "";
 	if(is_array($row_data) || is_object($row_data)){
 		foreach($row_data as $key => $cell_data){
