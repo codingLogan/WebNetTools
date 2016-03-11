@@ -11,8 +11,7 @@ class Geo{
 
 	public function __construct(){
 		exec("curl ipinfo.io", $this->results);
-		implode('', $this->results);
-		echo $this->results;
+		$this->results = implode('', $this->results);
 		$this->json = json_decode($this->results);
 
 		// Make sure JSON was decoded sucessfully
