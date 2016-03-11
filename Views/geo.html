@@ -1,0 +1,33 @@
+<!-- geo.html -->
+
+<div class="row">
+	<div class="col-xs-12">
+		<h1>GeoLocation Lookup</h1><hr>
+	</div>
+
+	<div class="col-xs-6">
+		<?php 
+		var_dump($geo->json); 
+		var_dump($geo->results); 
+		?>
+		<!-- <table class="table table-striped">
+			<tr><th>IP Address</th><th>Mac Address</th></tr>
+			<?php
+			foreach($arpscan_data->machines as $machine){
+				?>
+				<tr>
+					<td><?php echo htmlentities($machine->ip); ?></td>
+					<td><?php echo htmlentities($machine->mac); ?></td>
+				</tr>
+				<?php
+			}
+			?>
+		</table> -->
+	</div>
+	<div class="col-xs-6"></div>
+
+	<div class="col-xs-12">
+		<?php outputArray($arpscan_data->info); ?>
+		<hr>
+	</div>
+</div>

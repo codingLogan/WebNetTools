@@ -6,10 +6,17 @@ Date: 3/8/2016
 */
 
 class Geo{
-	public $dummy;
+	public $results;
+	public $json;
 
 	public function __construct(){
-		$this->dummy = "text";
+		exec("curl ipinfo.io", $this->results);
+		$this->json = json_decode($this->results);
+
+		// Make sure JSON was decoded sucessfully
+		if($this->json !== null){
+
+		}
 	}
 }
 
