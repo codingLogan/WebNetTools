@@ -1,13 +1,5 @@
 <?php require_once "functions/output_helpers.php"; ?>
 
-<form class="form-inline">
-  <div class="form-group">
-    <label for="ip_address">Name</label>
-    <input type="text" class="form-control" id="ip_address" placeholder="127.0.0.1">
-  </div>
-  <button type="submit" class="btn btn-default">Geolocate IP</button>
-</form>
-
 <div class="row">
 	<div class="col-xs-12">
 		<h1>Local Network Scan</h1><hr>
@@ -16,19 +8,6 @@
 	<div class="col-xs-6">
 		<?php
 		echo outputTable($arpscan_data->machines, array("IP Address", "MAC Address")); ?>
-		<!-- <table class="table table-striped">
-			<tr><th>IP Address</th><th>Mac Address</th></tr>
-			<?php
-			foreach($arpscan_data->machines as $machine){
-				?>
-				<tr>
-					<td><?php echo htmlentities($machine->ip); ?></td>
-					<td><?php echo htmlentities($machine->mac); ?></td>
-				</tr>
-				<?php
-			}
-			?>
-		</table> -->
 	</div>
 	<div class="col-xs-6"></div>
 
