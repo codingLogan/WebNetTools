@@ -24,7 +24,7 @@ function outputTable($data, $column_headings_array=null, $print_keys=false){
 	if(is_array($data) || is_object($data)){
 		// Output rows in $data
 		foreach($data as $row){
-			$table_string .= outputRow($row);
+			$table_string .= outputRow($row, false, $print_keys);
 		}
 	}
 	$table_string .= "</table>";
