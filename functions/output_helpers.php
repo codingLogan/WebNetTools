@@ -23,8 +23,9 @@ function outputTable($data, $column_headings_array=null, $print_keys=false){
 
 	if(is_array($data) || is_object($data)){
 		// Output rows in $data
-		foreach($data as $row){
-			$table_string .= outputRow($row, false, $print_keys);
+		var_dump($data);
+		foreach($data as $key => $row){
+			$table_string .= outputRow($row, false, $print_keys, $key);
 		}
 	}
 	$table_string .= "</table>";
@@ -32,15 +33,15 @@ function outputTable($data, $column_headings_array=null, $print_keys=false){
 	return $table_string;
 }
 
-function outputRow($row, $header, $print_keys){
+function outputRow($row, $header, $print_keys, $key){
 	$row_string = "<tr>";
-	$row_string .= outputCells($row, $header, $print_keys);
+	$row_string .= outputCells($row, $header, $print_keys, $key);
 	$row_string .= "</tr>";
 
 	return $row_string;
 }
 
-function outputCells($row_data, $header, $print_keys){
+function outputCells($row_data, $header, $print_keys, $row_key){
 	// If row is a header use <th>
 	$td = "<td>";
 	if($header==true){
@@ -51,7 +52,7 @@ function outputCells($row_data, $header, $print_keys){
 	if(is_array($row_data) || is_object($row_data)){
 		foreach($row_data as $key => $cell_data){
 			if($print_keys){
-				$cell_data_string .= $td.$key.$td;
+				$cell_data_string .= $td.$row_key.$td;
 			}
 			$cell_data_string .= $td.$cell_data.$td;
 		}
