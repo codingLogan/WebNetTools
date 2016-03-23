@@ -63,7 +63,7 @@ class HotSpot {
 		$this->pairwise_ciphers = "";
 		$this->authentication_suite = "";
 		$this->mode = "";
-		parseRawData($this->raw_data);
+		$this->parseRawData($this->raw_data);
 	}
 
 	private function parseRawData($array) {
