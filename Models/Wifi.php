@@ -18,7 +18,7 @@ class Wifi{
 			// See if we should create a new hotspot array
 			if(preg_match('/cell/i', $result)){
 				if(isset($current_hotspot) && is_array($current_hotspot)) {
-					$this->hotspots[] = new HotSpot($current_hotspot);
+					$this->hotspots[] = $current_hotspot;
 				}
 				$current_hotspot = null;
 				$current_hotspot = array();
@@ -31,7 +31,7 @@ class Wifi{
 		}
 		// Store the last hotspot
 		if(isset($current_hotspot) && is_array($current_hotspot) && !empty($current_hotspot))
-			$this->hotspots[] = new HotSpot($current_hotspot);
+			$this->hotspots[] = $current_hotspot;
 	}
 }
 
