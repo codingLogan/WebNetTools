@@ -14,17 +14,20 @@ class Wifi{
 		exec("sudo /sbin/iwlist wlan0 scan", $this->results);
 
 		// Parse through the results and obtain interesting info...
-		$current_hotspot = array();
 		foreach($this->results as $result){
 			// See if we should create a new hotspot array
 			if(preg_match('/cell/i', $result)){
-				$this->hotspots[] = $current_hotspot;
+				if(isset($current_hotspot) && is_array($current_hotspot)) {
+					$this->hotspots[] = $current_hotspot;
+				}
 				$current_hotspot = null;
 				$current_hotspot = array();
 			}
 
 			// Store current value
-			$current_hotspot[] = $result;
+			if(isset($current_hotspot) && is_array($current_hotspot)) {
+				$current_hotspot[] = $result;
+			}
 		}
 		// Store the last hotspot
 		$this->hotspots[] = $current_hotspot;
