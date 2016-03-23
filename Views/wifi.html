@@ -10,8 +10,13 @@
 <div class="row">
 	<div class="col-xs-6" id="results">
 		<?php 
-		echo outputTable($wifi->results, array("Data Point", "Value"), true);
-		//var_dump($wifi->results);
+
+		//echo outputTable($wifi->results, array("Data Point", "Value"), true);
+
+		foreach($wifi->hotspots as $hotspot) {
+			echo outputTable($hotspot, array("Data Point", "Value"), true);
+		}
+
 		?>
 	</div>
 	<div class="col-xs-6"></div>
