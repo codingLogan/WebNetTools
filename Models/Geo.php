@@ -20,7 +20,7 @@ class Geo{
 			exec("curl ipinfo.io/".$ip, $this->results);
 		}
 		
-		$this->results = implode('', $this->results);
+		$this->results = implode(' ', $this->results);
 		$this->json = json_decode($this->results);
 		$this->footer_text = "-Information provided by ipinfo.io-";
 	}
