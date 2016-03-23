@@ -70,25 +70,25 @@ class HotSpot {
 		foreach($array as $data){
 			if(isset($data) && !empty($data)){
 				switch ($data){
-					case (preg_match('/ESSID/i', $data)):
+					case (preg_match('/ESSID/i', $data) == 1):
 						$this->ESSID = $data; break;
-					case (preg_match('/Channel/i', $data)):
+					case (preg_match('/Channel/i', $data) == 1):
 						$this->channel = $data; break;
-					case (preg_match('/Frequency/i', $data)):
+					case (preg_match('/Frequency/i', $data) == 1):
 						$this->frequency = $data; break;
-					case (preg_match('/Quality/i', $data)):
+					case (preg_match('/Quality/i', $data) == 1):
 						$this->quality = $data; break;
-					case (preg_match('/Encryption key/i', $data)):
+					case (preg_match('/Encryption key/i', $data) == 1):
 						$this->encryption_key_status = $data; break;
-					case (preg_match('/IEEE/i', $data)):
+					case (preg_match('/IEEE/i', $data) == 1):
 						$this->ieee_type = $data; break;
-					case (preg_match('/Group Cipher/i', $data)):
+					case (preg_match('/Group Cipher/i', $data) == 1):
 						$this->group_cipher = $data; break;
-					case (preg_match('/Pairwise Ciphers/i', $data)):
+					case (preg_match('/Pairwise Ciphers/i', $data) == 1):
 						$this->pairwise_ciphers = $data; break;
-					case (preg_match('/Authentication Suite/i', $data)):
+					case (preg_match('/Authentication Suite/i', $data) == 1):
 						$this->authentication_suite = $data; break;
-					case (preg_match('/Mode/i', $data)):
+					case (preg_match('/Mode/i', $data) == 1):
 						$this->mode = $data; break;
 				}
 			}
