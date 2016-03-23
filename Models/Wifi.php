@@ -10,7 +10,6 @@ class Wifi{
 
 	public function __construct(){
 		exec("sudo /sbin/iwlist wlan0 scan", $this->results);
-		echo $this->results;
 	}
 }
 
