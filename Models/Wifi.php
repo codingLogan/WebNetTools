@@ -6,10 +6,11 @@ Date: 3/8/2016
 */
 
 class Wifi{
-	public $dummy;
+	public $results;
 
 	public function __construct(){
-		$this->dummy = "text";
+		exec("sudo /sbin/iwlist wlan0 scan", $this->results);
+		echo $this->results;
 	}
 }
 

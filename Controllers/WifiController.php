@@ -20,6 +20,7 @@ class WifiController {
 		$wifi = $this->wifi;
 		$dashboard = $this->dashboard;
 		include "Views/dashboard/begin.html";
+		include "Views/wifi.html";
 		include "Views/dashboard/end.html";
 	}
 }
