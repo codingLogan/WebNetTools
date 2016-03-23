@@ -72,10 +72,10 @@ class HotSpot {
 				switch ($data){
 					case (preg_match('/ESSID/i', $data) == 1):
 						$this->ESSID = $data; break;
-					case (preg_match('/^Channel/i', $data) == 1):
-						$this->channel = $data; break;
-					case (preg_match('/^Frequency/i', $data) == 1):
+					case (preg_match('/Frequency/i', $data) == 1):
 						$this->frequency = $data; break;
+					case (preg_match('/Channel/i', $data) == 1):
+						$this->channel = $data; break;
 					case (preg_match('/Quality/i', $data) == 1):
 						$this->quality = $data; break;
 					case (preg_match('/Encryption key/i', $data) == 1):
