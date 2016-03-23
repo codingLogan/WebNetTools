@@ -64,6 +64,8 @@ class HotSpot {
 		$this->authentication_suite = "";
 		$this->mode = "";
 		$this->parseRawData($this->raw_data);
+
+		var_dump($this);
 	}
 
 	private function parseRawData($array) {
