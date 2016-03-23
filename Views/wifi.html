@@ -12,10 +12,12 @@
 		<?php 
 
 		//echo outputTable($wifi->results, array("Data Point", "Value"), true);
+		$title_array = array("Name", "Channel", "Frequency", "Quality", "Encryption Key Status", "IEEE Type", "Group Cipher", "Pairwise Cipher", "Authentication Suite", "Mode");
 
-		foreach($wifi->hotspots as $hotspot) {
-			echo outputTable($hotspot, array("Name", "Channel", "Frequency", "Quality", "Encryption Key Status", "IEEE Type", "Group Cipher", "Pairwise Cipher", "Authentication Suite", "Mode"), false);
-		}
+		echo outputTable($wifi->hotspots, $title_array, false);
+		//foreach($wifi->hotspots as $hotspot) {
+			//echo outputTable($hotspot, $title_array, false);
+		//}
 
 		?>
 	</div>
