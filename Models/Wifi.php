@@ -18,25 +18,25 @@ class Wifi{
 			// See if we should create a new hotspot array
 			if(preg_match('/cell/i', $result)){
 				if(isset($current_hotspot) && is_array($current_hotspot)) {
-					$this->hotspots[] = $current_hotspot;
+					$this->hotspots[] = new HotSpot($current_hotspot);
 				}
 				$current_hotspot = null;
 				$current_hotspot = array();
 			}
 
 			// Store current value
-			if(isset($current_hotspot) && is_array($current_hotspot)) {
+			if(isset($current_hotspot) && is_array($current_hotspot) && !empty($result)) {
 				$current_hotspot[] = $result;
 			}
 		}
 		// Store the last hotspot
 		if(isset($current_hotspot) && is_array($current_hotspot) && !empty($current_hotspot))
-			$this->hotspots[] = $current_hotspot;
+			$this->hotspots[] = new HotSpot($current_hotspot);
 	}
 }
 
 class HotSpot {
-	public $raw_data;
+	// public $raw_data;
 
 	public $ESSID;
 	public $channel;
@@ -50,7 +50,7 @@ class HotSpot {
 	public $mode;
 
 	public function __construct($raw_data) {
-		$this->raw_data = $raw_data;
+		//$this->raw_data = $raw_data;
 
 		// Set defaults in case they aren't found
 		$this->ESSID = "";
@@ -64,8 +64,6 @@ class HotSpot {
 		$this->authentication_suite = "";
 		$this->mode = "";
 		$this->parseRawData($this->raw_data);
-
-		var_dump($this);
 	}
 
 	private function parseRawData($array) {
