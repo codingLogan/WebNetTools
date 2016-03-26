@@ -9,6 +9,7 @@
 		<?php
 		foreach($dashboard->tools_nav as $link) {
 			echo '<div class="col-xs-3">';
+			echo '<div class="caption text-center"><h3>'.htmlentities($link->text).'</h3></div>';
 			echo '<a href="'.htmlentities($link->url).'" class="thumbnail">';
 			echo '<img src="'.htmlentities($link->imagepath).'" class="img-rounded img-responsive">';
 			echo '</a>';
