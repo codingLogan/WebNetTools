@@ -20,6 +20,7 @@ class Dashboard {
 		$this->site_nav = array(
 			new NavLink("Dashboard", "dashboard.php")
 			,new NavLink("IP Gelocation", "geolocation.php")
+			,new NavLink("Ping", "ping.php")
 			,new NavLink("Scan Local IPs", "arpscan.php")
 			,new NavLink("Wifi Scan", "wifi.php")
 			,new NavLink("Wireshark", "wireshark.php")
