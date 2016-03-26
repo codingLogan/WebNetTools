@@ -104,6 +104,6 @@ body {
   border-radius: 50%;
 }
 
-.container > .row > div > .thumbnail {
+div.container div.row div .thumbnail {
   box-shadow: black 2px 2px;
 }
