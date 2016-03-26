@@ -5,11 +5,11 @@
 		<h1>Local Network Scan</h1><hr>
 	</div>
 
-	<div class="col-xs-6">
+	<div class="col-md-6 col-xs-12">
 		<?php
 		echo outputTable($arpscan_data->machines, array("IP Address", "MAC Address")); ?>
 	</div>
-	<div class="col-xs-6"></div>
+	<div class="col-md-6"></div>
 
 	<div class="col-xs-12">
 		<?php outputArray($arpscan_data->info); ?>
