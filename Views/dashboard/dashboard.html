@@ -4,25 +4,20 @@
 	</div>
 </div>
 
+<div class="container">
+	<div class="row">
+		<?php
+		foreach($dashboard->tools_nav as $link) {
+			echo '<div class="col-xs-3">';
+			echo '<a href="'.htmlentities($link->url).'" class="thumbnail">';
+			echo '<img src="'.htmlentities($link->imagepath).'" class="img-rounded" style="height:200px;">';
+			echo '</a>';
+			echo '</div>';
+		}
+		?>
+	</div>
+</div>
+
 <div class="row">
-	<div class="col-xs-3">
-		<a href="geo.php" class="thumbnail">
-			<img src="wifi.png" class="img-rounded">
-		</a>
-	</div>
-	<div class="col-xs-3">
-		<a href="ping.php" class="thumbnail">
-			<img src="wifi.png" class="img-rounded">
-		</a>
-	</div>
-	<div class="col-xs-3">
-		<a href="arpscan.php" class="thumbnail">
-			<img src="wifi.png" class="img-rounded">
-		</a>
-	</div>
-	<div class="col-xs-3">
-		<a href="wifi.php" class="thumbnail">
-			<img src="wifi.png" class="img-rounded">
-		</a>
-	</div>
+	<div class="col-xs-12"><a href="pixabay.com">-images freely provided by pixabay.com-</a></div>
 </div>
