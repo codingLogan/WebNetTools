@@ -107,11 +107,3 @@ body {
 .thumbnail {
   box-shadow: black 2px 2px;
 }
-
-/* footer */
-.mastfoot {
-  position: fixed;
-  bottom: 0;
-  text-align:center;
-  padding-bottom: 30px;
-}
