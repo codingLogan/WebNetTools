@@ -103,14 +103,3 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
-
-
-/* added from http://stackoverflow.com/questions/23400232/force-bootstrap-responsive-image-to-be-square */
-.image{
-    position:relative;
-    overflow:hidden;
-    padding-bottom:100%;
-}
-.image img{
-    position:absolute;
-}
