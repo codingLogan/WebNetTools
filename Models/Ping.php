@@ -15,17 +15,24 @@ class Ping {
 	public $info;
 
 	public function __construct($ip){
+		$this->responses = array();
+		$this->info = array();
+
 		$valid = filter_var($ip, FILTER_VALIDATE_IP);
+		if(!$valid) {
+			$valid = (preg_match('/^(?:[-A-Za-z0-9]+\.)+[A-Za-z]{2,6}$/g', $ip) == 1);
+		}
 
 		if($ip == "localhost"){
 			exec("ping -c 4 localhost", $this->results);
 		}
 		elseif($valid !== false){
-			exec("ping -c 4 ".$ip, $this->results);
+			exec("ping -c 4 ".escapeshellarg($ip), $this->results);
+		}
+		else {
+			$this->info[] = "Invalid IP or invalid domain name.";
 		}
 
-		$this->responses = array();
-		$this->info = array();
 		$this->parse_results();
 	}
 

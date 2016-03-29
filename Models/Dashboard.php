@@ -19,14 +19,14 @@ class Dashboard {
 		$this->title = "WebNet Tools";
 		$this->site_nav = array(
 			new NavLink("Dashboard", "dashboard.php")
-			,new NavLink("IP Gelocation", "geolocation.php")
+			,new NavLink("IP Geolocation", "geolocation.php")
 			,new NavLink("Ping", "ping.php")
 			,new NavLink("Scan Local IPs", "arpscan.php")
 			,new NavLink("Wifi Scan", "wifi.php")
 			,new NavLink("Wireshark", "wireshark.php")
 		);
 		$this->tools_nav = array(
-			new NavLink("IP Gelocation", "geolocation.php", "images/geo2.png")
+			new NavLink("IP Geolocation", "geolocation.php", "images/geo2.png")
 			,new NavLink("Ping", "ping.php", "images/ping.png")
 			,new NavLink("Scan Local IPs", "arpscan.php", "images/arpscan.png")
 			,new NavLink("Wifi Scan", "wifi.php", "images/wifi.png")
