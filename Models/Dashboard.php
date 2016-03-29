@@ -22,8 +22,8 @@ class Dashboard {
 			,new NavLink("IP Geolocation", "geolocation.php")
 			,new NavLink("Ping", "ping.php")
 			,new NavLink("Scan Local IPs", "arpscan.php")
-			//,new NavLink("Wifi Scan", "wifi.php")
-			,new NavLink("Wireshark", "wireshark.php")
+			,new NavLink("Wifi Scan", "wifi.php")
+			//,new NavLink("Wireshark", "wireshark.php")
 			,new NavLink("Help", "help.php")
 		);
 		$this->tools_nav = array(
