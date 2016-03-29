@@ -20,7 +20,7 @@ class Ping {
 
 		$valid = filter_var($ip, FILTER_VALIDATE_IP);
 		if(!$valid) {
-			$valid = (preg_match('/^(?:[-A-Za-z0-9]+\.)+[A-Za-z]{2,6}$/g', $ip) == 1);
+			$valid = (preg_match('/^(?:[-A-Za-z0-9]+\.)+[A-Za-z]{2,6}$/', $ip) == 1);
 		}
 
 		if($ip == "localhost"){
