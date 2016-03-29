@@ -1,0 +1,25 @@
+<!-- help.html -->
+<?php require_once "functions/output_helpers.php"; 
+
+foreach($help->sections as $section) { ?>
+
+	<div class="page-header">
+		<h3><?php echo htmlentities($section->title); ?></h3>
+	</div>
+
+	<?php foreach($section->paragraphs as $p) { ?>
+		<p><?php echo htmlentities($p); ?></p>
+	<?php } 
+
+	if (is_array($section->examples) && count($section->examples > 0)) { ?>
+		<ul class="list-group">
+		<?php foreach($section->examples as $ex) { ?>
+			<li class="list-group-item"><?php echo htmlentities($ex); ?></li>
+		<?php } ?>
+		</ul>
+
+		<?php foreach($section->examples as $p) { ?>
+			<p><?php echo htmlentities($p); ?></p>
+		<?php } 
+	} 
+} ?>
